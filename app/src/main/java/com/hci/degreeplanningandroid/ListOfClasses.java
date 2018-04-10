@@ -9,6 +9,10 @@ import android.content.Context;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class ListOfClasses extends Fragment {
 
@@ -38,6 +42,33 @@ public class ListOfClasses extends Fragment {
         // Here we will can create click listners etc for all the gui elements on the fragment.
         // For eg: Button btn1= (Button) view.findViewById(R.id.frag1_btn1);
         // btn1.setOnclickListener(...
+
+        ArrayList<String> courses = new ArrayList<String>();
+        courses.add("CMSC320");
+        courses.add("CMSC389N");
+        courses.add("CMSC411");
+        courses.add("CMSC412");
+        courses.add("CMSC414");
+        courses.add("CMSC417");
+        courses.add("CMSC420");
+        courses.add("CMSC421");
+        courses.add("CMSC423");
+        courses.add("CMSC424");
+        courses.add("CMSC430");
+        courses.add("CMSC433");
+        courses.add("CMSC434");
+        courses.add("CMSC435");
+        courses.add("CMSC436");
+        courses.add("CMSC451");
+        courses.add("CMSC452");
+        courses.add("CMSC456");
+
+        ListView lv = view.findViewById(R.id.courses_available);
+
+        ArrayAdapter<String> courseAdapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1, courses);
+
+        lv.setAdapter(courseAdapter);
 
         return view;
     }

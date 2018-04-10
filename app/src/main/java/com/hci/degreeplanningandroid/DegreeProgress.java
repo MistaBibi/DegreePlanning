@@ -10,6 +10,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+import static java.lang.System.exit;
 
 public class DegreeProgress extends Fragment {
 
@@ -40,6 +50,42 @@ public class DegreeProgress extends Fragment {
         // For eg: Button btn1= (Button) view.findViewById(R.id.frag1_btn1);
         // btn1.setOnclickListener(...
 
+        ListView lv = view.findViewById(R.id.class_list);
+
+        CSVFile csv = null;
+        InputStream is = getResources().openRawResource(R.raw.degree_progress);
+        csv = new CSVFile(/*new FileInputStream(/*"C:\\Users\\kozel\\OneDrive\\Documents\\GitHub\\DegreePlanning\\app\\src\\main\\res\\raw\\degree_planning"),*/
+                is,"degree_progress.csv");
+
+        ArrayList<String> classList = null;
+
+        //if (csv != null) {
+        classList = csv.read();
+        //}
+
+//        CSVFile csv = null;
+//        try {
+//            //InputStream is = getResources().openRawResource(R.raw.degree_progress);
+//            csv = new CSVFile(new FileInputStream("C:\\Users\\kozel\\OneDrive\\Documents\\GitHub\\DegreePlanning\\app\\src\\main\\res\\raw\\degree_planning"),
+//                    /*is,*/"degree_progress.csv");
+//        } catch (FileNotFoundException f) {
+//            System.out.print("FILE NOT FOUND");
+//            exit(1);
+//        }
+//
+//        ArrayList<String[]> classList = null;
+//
+//        if (csv != null) {
+//            classList = csv.read();
+//        }
+//
+        ArrayAdapter<String> courseAdapter = new ArrayAdapter<String>(getActivity(),
+                android.R.layout.simple_list_item_1, classList);
+
+        lv.setAdapter(courseAdapter);
+
+        //displayCourses();
+
         return view;
     }
 
@@ -67,4 +113,37 @@ public class DegreeProgress extends Fragment {
         // NOTE : We changed the Uri to String.
         void onFragmentInteraction(String title);
     }
+
+    public void displayCourses() {
+        CSVFile csv = null;
+       try {
+            //InputStream is = getResources().openRawResource(R.raw.degree_progress);
+            csv = new CSVFile(new FileInputStream("C:\\Users\\kozel\\OneDrive\\Documents\\GitHub\\DegreePlanning\\app\\src\\main\\res\\raw\\degree_planning"),
+                    /*is,*/"degree_progress.csv");
+        } catch (FileNotFoundException f) {
+            System.out.print("FILE NOT FOUND");
+            exit(1);
+        }
+
+        ArrayList<String> classList = null;
+
+        if (csv != null) {
+            classList = csv.read();
+        }
+
+//        if(classList != null) {
+//            for (String courseInfo: classList) {
+//                String course = courseInfo[;
+//                if (courseInfo.equals("X")) {
+//                    System.out.println(course + "TAKEN");
+//                } else if (courseInfo[2].equals("X")) {
+//                    System.out.println(course + "IN PROGRESS");
+//                } else if (courseInfo[3].equals("X")) {
+//                    System.out.println(course + "NOT TAKEN");
+//                }
+//            }
+//        }
+
+    }
+
 }

@@ -11,19 +11,27 @@ import java.util.List;
 public class CSVFile {
     private String fileName;
     private InputStream inputStream = null;
-    private List CSVValues = null;
+    private ArrayList<String> CSVValues = null;
 
     public CSVFile(InputStream inputStream, String fileName) {
         this.fileName = fileName;
         this.inputStream = inputStream;
-        CSVValues = new ArrayList();
+        CSVValues = new ArrayList<String>();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         try {
             String csvLine;
             while ((csvLine = reader.readLine()) != null) {
                 String[] row = csvLine.split(",");
-                CSVValues.add(row);
+                if (!row[0].equals("CLASS")) {
+                    if (row[1].equals("X")) {
+                        CSVValues.add(row[0] + " TAKEN");
+                    } else if (row[2].equals("X")) {
+                        CSVValues.add(row[0] + " IN PROGRESS");
+                    } else if (row[3].equals("X")) {
+                        CSVValues.add(row[0] + " NOT COMPLETED");
+                    }
+                }
             }
         }
         catch (IOException ex) {
@@ -41,7 +49,7 @@ public class CSVFile {
     /*
      * Returns the entire CSV file as a List of String arrays
      */
-    public List read(){
+    public ArrayList<String> read(){
         return CSVValues;
     }
 
@@ -67,7 +75,7 @@ public class CSVFile {
         }
     }
 
-    public void addRecord(String[] record) {
+    public void addRecord(String record) {
         CSVValues.add(record);
     }
 
