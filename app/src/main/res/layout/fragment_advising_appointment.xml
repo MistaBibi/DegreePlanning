@@ -4,10 +4,631 @@
     android:layout_height="match_parent"
     tools:context=".AdvisingAppointment">
 
-    <TextView
-        android:gravity="center"
+    <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Advising Appointment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="145dp"
+                        android:layout_height="wrap_content"
+                        android:text="Evan Golub" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:text="Larry Herman" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="133dp"
+                        android:layout_height="wrap_content"
+                        android:text="Michelle Huges" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="132dp"
+                        android:layout_height="wrap_content"
+                        android:text="Clyde Kruskal" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9:00-9:30" />
+
+                    <EditText
+                        android:id="@+id/editText77"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText76"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText75"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText74"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="9:30-10" />
+
+                    <EditText
+                        android:id="@+id/editText81"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText79"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText78"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10-10:30" />
+
+                    <EditText
+                        android:id="@+id/editText85"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText84"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText83"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText82"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:30-11" />
+
+                    <EditText
+                        android:id="@+id/editText89"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText88"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText87"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText86"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11-11:30" />
+
+                    <EditText
+                        android:id="@+id/editText93"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText92"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText91"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText90"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11:30-12" />
+
+                    <EditText
+                        android:id="@+id/editText73"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText72"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText70"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12:30-1" />
+
+                    <EditText
+                        android:id="@+id/editText97"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText95"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText94"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1-1:30" />
+
+                    <EditText
+                        android:id="@+id/editText101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1:30-2" />
+
+                    <EditText
+                        android:id="@+id/editText105"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText104"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText103"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2:30-3" />
+
+                    <EditText
+                        android:id="@+id/editText110"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText109"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText108"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText106"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3-3:30" />
+
+                    <EditText
+                        android:id="@+id/editText114"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText113"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText112"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3:30-4" />
+
+                    <EditText
+                        android:id="@+id/editText118"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText117"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText116"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                    <EditText
+                        android:id="@+id/editText115"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:inputType="textPersonName"
+                        android:text="O" />
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </FrameLayout>
