@@ -50,41 +50,44 @@ public class DegreeProgress extends Fragment {
         // For eg: Button btn1= (Button) view.findViewById(R.id.frag1_btn1);
         // btn1.setOnclickListener(...
 
-        ListView lv = view.findViewById(R.id.class_list);
-
-        CSVFile csv = null;
         InputStream is = getResources().openRawResource(R.raw.degree_progress);
-        csv = new CSVFile(/*new FileInputStream(/*"C:\\Users\\kozel\\OneDrive\\Documents\\GitHub\\DegreePlanning\\app\\src\\main\\res\\raw\\degree_planning"),*/
-                is,"degree_progress.csv");
 
-        ArrayList<String> classList = null;
+        CSVFile csv = new CSVFile(is,"degree_progress.csv");
 
-        //if (csv != null) {
-        classList = csv.read();
-        //}
+        // Read in CSV
+        ArrayList<String[]> classList = csv.read();
 
-//        CSVFile csv = null;
-//        try {
-//            //InputStream is = getResources().openRawResource(R.raw.degree_progress);
-//            csv = new CSVFile(new FileInputStream("C:\\Users\\kozel\\OneDrive\\Documents\\GitHub\\DegreePlanning\\app\\src\\main\\res\\raw\\degree_planning"),
-//                    /*is,*/"degree_progress.csv");
-//        } catch (FileNotFoundException f) {
-//            System.out.print("FILE NOT FOUND");
-//            exit(1);
-//        }
-//
-//        ArrayList<String[]> classList = null;
-//
-//        if (csv != null) {
-//            classList = csv.read();
-//        }
-//
-        ArrayAdapter<String> courseAdapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, classList);
+        ArrayList<String> completedCourses = new ArrayList<>();
+        ArrayList<String> incompleteCourses = new ArrayList<>();
+        ArrayList<String> inProgressCourses = new ArrayList<>();
 
-        lv.setAdapter(courseAdapter);
+        // Add completed courses
+        for(String[] classInfo: classList) {
+            String course = classInfo[0];
+            System.out.print(course);
+            String status = classInfo[1];
+            System.out.print(status);
+            switch (status) {
+                case "X": completedCourses.add(course);
+                case "O": incompleteCourses.add(course);
+                case "P": inProgressCourses.add(course);
+            }
+        }
 
-        //displayCourses();
+        ListView completedList = view.findViewById(R.id.completed_list);
+        ArrayAdapter<String> courseAdapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_list_item_1, completedCourses);
+        completedList.setAdapter(courseAdapter);
+
+        ListView incompleteList = view.findViewById(R.id.incomplete_list);
+        courseAdapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_list_item_1, incompleteCourses);
+        incompleteList.setAdapter(courseAdapter);
+
+        ListView inProgressList = view.findViewById(R.id.progress_list);
+        courseAdapter = new ArrayAdapter<>(getActivity(),
+                android.R.layout.simple_list_item_1, inProgressCourses);
+        inProgressList.setAdapter(courseAdapter);
 
         return view;
     }
@@ -112,38 +115,6 @@ public class DegreeProgress extends Fragment {
     public interface OnFragmentInteractionListener {
         // NOTE : We changed the Uri to String.
         void onFragmentInteraction(String title);
-    }
-
-    public void displayCourses() {
-        CSVFile csv = null;
-       try {
-            //InputStream is = getResources().openRawResource(R.raw.degree_progress);
-            csv = new CSVFile(new FileInputStream("C:\\Users\\kozel\\OneDrive\\Documents\\GitHub\\DegreePlanning\\app\\src\\main\\res\\raw\\degree_planning"),
-                    /*is,*/"degree_progress.csv");
-        } catch (FileNotFoundException f) {
-            System.out.print("FILE NOT FOUND");
-            exit(1);
-        }
-
-        ArrayList<String> classList = null;
-
-        if (csv != null) {
-            classList = csv.read();
-        }
-
-//        if(classList != null) {
-//            for (String courseInfo: classList) {
-//                String course = courseInfo[;
-//                if (courseInfo.equals("X")) {
-//                    System.out.println(course + "TAKEN");
-//                } else if (courseInfo[2].equals("X")) {
-//                    System.out.println(course + "IN PROGRESS");
-//                } else if (courseInfo[3].equals("X")) {
-//                    System.out.println(course + "NOT TAKEN");
-//                }
-//            }
-//        }
-
     }
 
 }

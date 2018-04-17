@@ -2,13 +2,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignParentBottom="true"
     tools:context=".DegreeProgress">
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id = "@+id/class_list"/>
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/completed_label"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:text="COMPLETED"
+            android:textColor="@android:color/holo_green_light" />
 
+        <ListView
+            android:id="@+id/completed_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/in_progress_label"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IN PROGRESS"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <ListView
+            android:id="@+id/progress_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/incomplete_label"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INCOMPLETE"
+            android:textColor="@android:color/holo_red_light" />
+
+        <ListView
+            android:id="@+id/incomplete_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
 
 </FrameLayout>
